@@ -1,11 +1,19 @@
+<script setup lang="ts">
+  const { isDarkMode } = useDarkMode();
+</script>
+
 <template>
   <div class="container">
     <div class="content-container">
       <div class="text-container">
         <h4>Based on your reading history</h4>
-        <h2>Designing search for mobile apps</h2>
-        <p class="date">Aug 26th, 2021, 4pm</p>
-        <p class="snippet">
+        <h2 :style="isDarkMode ? { color: 'white' } : ''">
+          Designing search for mobile apps
+        </h2>
+        <p :style="isDarkMode ? { color: 'white' } : ''" class="date">
+          Aug 26th, 2021, 4pm
+        </p>
+        <p :style="isDarkMode ? { color: 'white' } : ''" class="snippet">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, in.
           Obcaecati in iusto minima impedit assumenda perferendis natus tempore
           modi ducimus. Blanditiis, quis. Maxime delectus ducimus assumenda vel
@@ -23,38 +31,38 @@
 </template>
 
 <style scoped>
-h4 {
-  text-transform: uppercase;
-  font-size: 20px;
-  color: grey;
-}
+  h4 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: grey;
+  }
 
-h2 {
-  margin-top: 15px;
-  font-size: 40px;
-}
+  h2 {
+    margin-top: 15px;
+    font-size: 40px;
+  }
 
-.date {
-  margin-top: 15px;
-}
+  .date {
+    margin-top: 15px;
+  }
 
-.content-container {
-  display: flex;
-}
+  .content-container {
+    display: flex;
+  }
 
-.text-container {
-  padding-right: 50px;
-}
+  .text-container {
+    padding-right: 50px;
+  }
 
-.snippet {
-  margin-top: 30px;
-  font-size: 20px;
-  line-height: 30px;
-}
+  .snippet {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 
-.container {
-  max-width: 50%;
-  margin: 0 auto;
-  padding: 50px 0;
-}
+  .container {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
 </style>
